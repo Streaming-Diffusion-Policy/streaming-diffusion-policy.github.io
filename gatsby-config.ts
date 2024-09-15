@@ -2,8 +2,8 @@ import type {GatsbyConfig} from "gatsby";
 
 const config: GatsbyConfig = {
     siteMetadata: {
-        title: `Streaming Diffusion Policy`,
-        siteUrl: `https://streaming-diffusion-policy.github.io`
+        title: `Feature Fields Manipulation`,
+        siteUrl: `https://f3rm.csail.mit.edu`
     },
     pathPrefix: "/",
     // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
@@ -16,37 +16,7 @@ const config: GatsbyConfig = {
         "gatsby-plugin-sitemap",
         {
             resolve: "gatsby-plugin-google-gtag",
-            options: {import type { GatsbyConfig } from "gatsby";
-
-            const config: GatsbyConfig = {
-              siteMetadata: {
-                title: `Streaming Diffusion Policy: Fast Policy Synthesis with Variable Noise Diffusion Models`,
-                siteUrl: `https://streaming-diffusion-policy.github.io`,
-              },
-              pathPrefix: "/",
-              graphqlTypegen: true,
-              plugins: [
-                "gatsby-plugin-postcss",
-                "gatsby-plugin-sitemap",
-                {
-                  resolve: "gatsby-plugin-manifest",
-                  options: {
-                    icon: "src/images/your_icon.png", // Update the icon path if necessary
-                  },
-                },
-                {
-                  resolve: "gatsby-source-filesystem",
-                  options: {
-                    name: "pages",
-                    path: "./src/pages/",
-                  },
-                  __key: "pages",
-                },
-              ],
-            };
-            
-            export default config;
-            
+            options: {
                 trackingIds: [
                     // Change this to your own Google Analytics Tracking ID
                     "G-T7NKWVQH1D",
