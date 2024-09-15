@@ -1,4 +1,4 @@
-# F3RM Website
+# Streaming Diffusion Policy Website
 
 Project website for the paper "Fast Policy Synthesis with Variable Noise Diffusion Models".
 
