@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>Streaming Diffusion Policy: Fast Policy Synthesis with Variable Noise Diffusion Models </title>
+
+    <meta name="description" content="Streaming Diffusion Policy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+     <!--FACEBOOK-->
+     <meta property="og:image" content="./img/share_image.png">
+     <meta property="og:image:type" content="image/png">
+     <meta property="og:image:width" content="1196">
+     <meta property="og:image:height" content="705">
+     <meta property="og:type" content="website" />
+     <meta property="og:url" content="https://streaming-diffusion-policy.github.io/"/>
+     <meta property="og:title" content="Streaming Diffusion Policy" />
+     <meta property="og:description"
+         content="Project page for Streaming Diffusion Policy." />
+ 
+     <!--TWITTER-->
+     <meta name="twitter:card" content="summary_large_image" />
+     <meta name="twitter:title" content="Streaming Diffusion Policy" />
+     <meta name="twitter:description"
+         content="Project page for Streaming Diffusion Policy" />
+     <meta name="twitter:image" content="./img/share_image.png" />
+
+     
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/default.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+	
+    <style>
+        .nav-pills {
+          position: relative;
+          display: inline;
+        }
+        .imtip {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+    </style>
+</head>
+<!-- Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-5JBS73F70V"></script> -->
+<!-- <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5JBS73F70V');
+</script> -->
+<body>
+    <div class="container" id="main">
+        <div class="row mt-4">
+            <h2 class="col-md-12 text-center">
+                <b><font size="+6">Streaming Diffusion Policy</font></b></br> 
+                <br>
+                <font size="+3">Fast Policy Synthesis with Variable Noise Diffusion Models</font>
+            </h2>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                <br>
+                <li><a href="https://sigmundhh.github.io/">Sigmund H. Høeg</a></li>
+                <li><a href="https://yilundu.github.io/">Yilun Du</a></li>
+                <li><a href="https://https://www.ntnu.edu/employees/olav.egeland/">Olav Egeland </a></li>
+                <br>
+                <br>
+                </ul>
+            </div>
+        </div>
+
+        <div class="row justify-content-md-center">
+            <div class="col-md-10 col-lg-8">
+
+                <h3 class="mt-4 mb-2">
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    Diffusion models have seen rapid adoption in robotic imitation learning, enabling autonomous execution of complex dexterous tasks. However, action synthesis is often slow, requiring many steps of iterative denoising, limiting the extent to which models can be used in tasks that require fast reactive policies. To sidestep this, recent works have explored how the distillation of the diffusion process can be used to accelerate policy synthesis. However, distillation is computationally expensive and can hurt both the accuracy and diversity of synthesized actions. We propose \model (\modellong), an alternative method to accelerate policy synthesis, leveraging the insight that generating a partially denoised action trajectory is substantially faster than a full output action trajectory. At each observation, our approach outputs a partially denoised action trajectory it <i>with variable levels of noise corruption</i>, where the immediate action to execute is noise-free, with subsequent actions having increasing levels of noise and uncertainty. The partially denoised action trajectory for a new observation can then be quickly generated by applying a few steps of denoising to the previously predicted noisy action trajectory (rolled over by one timestep).  We illustrate the efficacy of this approach, dramatically speeding up policy synthesis while preserving performance across both simulated and real-world settings.
+                </p>
+                
+            </div>
+        </div>
+        <br>
+        
+        
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>hljs.highlightAll();</script>
+</body>
+</html>
