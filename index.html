@@ -100,29 +100,33 @@
                     </div>
                 </div>
 
-                <div class="row mt-4" id="video-container">
-                    <div class="col-md-6">
-                        <video id="video1" width="100%" loop muted playsinline>
-                            <source src="videos/vis_buffer_dp_ta1.mp4" type="video/mp4">
-                        </video>
-                        <p class="text-center"><strong><span style="font-size: 1.8em;">Diffusion Policy</span></strong></p>
-                    </div>
-                    <div class="col-md-6">
-                        <video id="video2" width="100%" loop muted playsinline>
-                            <source src="videos/vis_buffer_tedi-alpha1.mp4" type="video/mp4">
-                        </video>
-                        <p class="text-center"><strong><span style="font-size: 1.8em;">Streaming Diffusion Policy</span></strong></p>
+                <div class="row mt-4 justify-content-center" id="video-container">
+                    <div class="col-md-10 col-lg-8">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <video id="video1" width="100%" loop muted playsinline>
+                                    <source src="videos/vis_buffer_dp_ta1.mp4" type="video/mp4">
+                                </video>
+                                <p class="text-center"><strong><span style="font-size: 1.2em;">Diffusion Policy</span></strong></p>
+                            </div>
+                            <div class="col-md-6">
+                                <video id="video2" width="100%" loop muted playsinline>
+                                    <source src="videos/vis_buffer_tedi-alpha1.mp4" type="video/mp4">
+                                </video>
+                                <p class="text-center"><strong><span style="font-size: 1.2em;">Streaming Diffusion Policy</span></strong></p>
+                            </div>
+                        </div>
+                        <p class="text-center mt-2"><em>Hover (or tap on mobile) to play individual videos</em></p>
                     </div>
                 </div>
-                <p class="text-center mt-2"><em>Hover (or tap on mobile) to play individual videos</em></p>
             </div>
         </div>
         <br>
         
         <div class="row justify-content-md-center">
-            <div class="col-md-12">
+            <div class="col-md-10 col-lg-8 mx-auto">
                 <div class="row mt-4">
-                    <div class="col-md-10 col-lg-8 mx-auto">
+                    <div class="col-md-12">
                         <p class="text-justify">
                             Our SDP approach synthesizes a persistent action buffer consisting of future actions to execute. <br>
                             We first initialize the buffer to have increasing levels of noise corruption. <br>
@@ -137,6 +141,15 @@
                             <source src="videos/ActionBufferAnimation.mp4" type="video/mp4">
                         </video>
                     </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-10 col-lg-8 mx-auto">
+                <h3 class="mt-4 mb-2">Video</h3>
+                <div class="ratio ratio-16x9">
+                    <iframe src="https://www.youtube.com/embed/58VLJEDQCg0" title="YouTube video" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
