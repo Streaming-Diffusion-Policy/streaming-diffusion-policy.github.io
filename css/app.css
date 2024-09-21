@@ -182,3 +182,16 @@ pre.codegen {
   width: 100%;
   height: 100%;
 }
+
+.fa-video, .fa-code, .fa-file-alt {
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+.fa-video:hover, .fa-code:hover, .fa-file-alt:hover {
+  color: #0056b3;
+}
+
+.d-inline-block.mx-2 {
+  margin-bottom: 10px;
+}
