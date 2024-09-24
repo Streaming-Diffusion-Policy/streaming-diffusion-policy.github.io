@@ -114,13 +114,12 @@ document.addEventListener('DOMContentLoaded', function() {
     // Additional Real Tasks video control
     const taskVideo = document.getElementById('taskVideo');
     const taskSelect = document.getElementById('taskSelect');
-    const playPauseBtn = document.getElementById('playPauseBtn');
 
-    // Function to update video source and play
+    // Function to update video source without auto-playing
     function updateVideoSource(src) {
         taskVideo.src = src;
         taskVideo.load();
-        taskVideo.play().catch(e => console.error("Error playing video:", e));
+        // Auto-play is removed so the user can control playback using the controls
     }
 
     // Initialize with the first video
@@ -129,25 +128,5 @@ document.addEventListener('DOMContentLoaded', function() {
     // Event listener for task selection change
     taskSelect.addEventListener('change', function() {
         updateVideoSource(this.value);
-    });
-
-    // Event listener for play/pause button
-    playPauseBtn.addEventListener('click', function() {
-        if (taskVideo.paused) {
-            taskVideo.play().catch(e => console.error("Error playing video:", e));
-            this.textContent = 'Pause';
-        } else {
-            taskVideo.pause();
-            this.textContent = 'Play';
-        }
-    });
-
-    // Update button text based on video playback status
-    taskVideo.addEventListener('play', function() {
-        playPauseBtn.textContent = 'Pause';
-    });
-
-    taskVideo.addEventListener('pause', function() {
-        playPauseBtn.textContent = 'Play';
     });
 });
