@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Select all video elements
     const videos = document.querySelectorAll('video');
+    
 
     // Function to handle video end
     function handleVideoEnd(video) {
@@ -98,7 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (playAllBtn) {
         playAllBtn.addEventListener('click', () => {
             videos.forEach(video => {
-                //video.currentTime = 0; // Reset to beginning
                 video.play();
             });
         });
