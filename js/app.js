@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
     // Select all video elements
-    const videos = document.querySelectorAll('video');
-    
+    //const videos = document.querySelectorAll('video');
+    const videos = [
+        document.getElementById('video1'),
+        document.getElementById('video2'),
+    ];
 
     // Function to handle video end
     function handleVideoEnd(video) {
@@ -98,7 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const playAllBtn = document.getElementById('playAllBtn');
     if (playAllBtn) {
         playAllBtn.addEventListener('click', () => {
-            videos.forEach(video => {
+            pushVideos.forEach(video => {
+                video.currentTime = 0; // Restart the video
                 video.play();
             });
         });
