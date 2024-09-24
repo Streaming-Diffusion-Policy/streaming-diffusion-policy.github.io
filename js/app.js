@@ -112,47 +112,42 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     // Additional Real Tasks video control
-    const realTaskVideos = {
-        realTaskVideo1: document.getElementById('realTaskVideo1'),
-        realTaskVideo2: document.getElementById('realTaskVideo2'),
-        realTaskVideo3: document.getElementById('realTaskVideo3')
-    };
-
-    // Function to hide all real task videos
-    function hideAllRealTaskVideos() {
-        Object.values(realTaskVideos).forEach(video => {
-            video.style.display = 'none';
-            video.pause();
-            video.currentTime = 0;
-        });
-    }
-
-    // Function to show and play selected real task video
-    function showSelectedRealTaskVideo(videoId) {
-        hideAllRealTaskVideos();
-        const video = realTaskVideos[videoId];
-        if (video) {
-            video.style.display = 'block';
-            video.play(); // Automatically play the video when shown
-        }
-    }
-    // Initialize by showing the first real task video
+    const taskVideo = document.getElementById('taskVideo');
     const taskSelect = document.getElementById('taskSelect');
     const playPauseBtn = document.getElementById('playPauseBtn');
-    showSelectedRealTaskVideo(taskSelect.value);
+
+    // Function to update video source and play
+    function updateVideoSource(src) {
+        taskVideo.src = src;
+        taskVideo.load();
+        taskVideo.play().catch(e => console.error("Error playing video:", e));
+    }
+
+    // Initialize with the first video
+    updateVideoSource(taskSelect.value);
+
     // Event listener for task selection change
     taskSelect.addEventListener('change', function() {
-        showSelectedRealTaskVideo(this.value);
+        updateVideoSource(this.value);
     });
+
     // Event listener for play/pause button
     playPauseBtn.addEventListener('click', function() {
-        const currentVideo = realTaskVideos[taskSelect.value];
-        if (currentVideo) {
-            if (currentVideo.paused) {
-                currentVideo.play();
-            } else {
-                currentVideo.pause();
-            }
+        if (taskVideo.paused) {
+            taskVideo.play().catch(e => console.error("Error playing video:", e));
+            this.textContent = 'Pause';
+        } else {
+            taskVideo.pause();
+            this.textContent = 'Play';
         }
+    });
+
+    // Update button text based on video playback status
+    taskVideo.addEventListener('play', function() {
+        playPauseBtn.textContent = 'Pause';
+    });
+
+    taskVideo.addEventListener('pause', function() {
+        playPauseBtn.textContent = 'Play';
     });
 });

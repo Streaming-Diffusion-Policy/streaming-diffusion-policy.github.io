@@ -209,20 +209,14 @@
                 <div class="form-group">
                     <label for="taskSelect">Choose a task:</label>
                     <select class="form-control" id="taskSelect">
-                        <option value="realTaskVideo1">Lifting Rubber Duck onto Cube</option>
-                        <option value="realTaskVideo2">Block Stacking</option>
-                        <option value="realTaskVideo3">Peg-in-hole</option>
+                        <option value="videos/real_tasks/duck_lift_compressed.m4v">Lifting rubber duck onto cube</option>
+                        <option value="videos/real_tasks/block_stacking_compressed.m4v">Block stacking</option>
+                        <option value="videos/real_tasks/peg_compressed.m4v">Peg-in-hole</option>
                     </select>
                 </div>
                 <div class="video-container mt-4">
-                    <video id="realTaskVideo1" width="100%" muted playsinline style="display: none;">
-                        <source src="videos/real_tasks/duck_lift_compressed.m4v" type="video/mp4">
-                    </video>
-                    <video id="realTaskVideo2" width="100%" muted playsinline style="display: none;">
+                    <video id="taskVideo" width="100%" muted playsinline preload="auto">
                         <source src="videos/real_tasks/block_stacking_compressed.m4v" type="video/mp4">
-                    </video>
-                    <video id="realTaskVideo3" width="100%" muted playsinline style="display: none;">
-                        <source src="videos/real_tasks/peg_compressed.m4v" type="video/mp4">
                     </video>
                 </div>
                 <div class="text-center mt-3">
